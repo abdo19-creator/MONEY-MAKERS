@@ -1,0 +1,252 @@
+/* تنسيق عام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('photo_2024-10-20_05-21-31.jpg') no-repeat center center/cover;
+    color: #34e89e;
+    line-height: 1.8;
+    overflow-x: hidden; /* لمنع التمرير الأفقي */
+}
+
+/* شريط التنقل */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo img {
+    width: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #34e89e;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #34e89e;
+    color: #000;
+}
+
+/* الحاوية الرئيسية */
+.login-container {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(16, 31, 18, 0.6);
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 25px rgba(76, 175, 80, 0.37);
+}
+
+/* النصوص */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #34e89e;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #34e89e;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #34e89e;
+    border: none;
+    border-radius: 50px;
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #2bc67a;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    color: #34e89e;
+    font-size: 14px;
+}
+
+/* تسجيل الدخول عبر وسائل التواصل */
+.alternative-login {
+    margin: 20px 0;
+}
+
+.alternative-login p {
+    color: #34e89e;
+    font-size: 14px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.social-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.google {
+    background-color: #db4437;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.social-btn:hover {
+    opacity: 0.8;
+}
+
+/* اختيار اللغة */
+.language-selection {
+    margin-top: 15px;
+    color: #34e89e;
+}
+
+.language-selection select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #34e89e;
+    outline: none;
+}
+
+/* الرسوم المتحركة */
+.forex-animation, .forex-animation2, .forex-animation3, .forex-animation4 {
+    position: absolute;
+}
+
+.forex-animation {
+    bottom: 140px;
+    right: 42px;
+}
+
+.forex-animation2 {
+    bottom: 50px;
+    right: 42px;
+}
+
+.forex-animation3 {
+    bottom: 300px;
+    left: 220px;
+    opacity: 0.5;
+    transform: scale(3);
+}
+
+.forex-animation4 {
+    bottom: 120px;
+    left: 103px;
+    opacity: 0.5;
+    transform: scale(1);
+    text-align: center;
+}
+
+.animation, .animation2, .animation3 {
+    width: 100px;
+    animation: moveUpDown 2s infinite alternate;
+}
+
+/* الرسوم المتحركة للسهم */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* الفوتر */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #34e89e;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .forex-animation3 {
+        left: 10px;
+        bottom: 250px;
+    }
+
+    .forex-animation4 {
+        left: 20px;
+        bottom: 150px;
+    }
+}
